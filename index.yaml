@@ -1,0 +1,64 @@
+apiVersion: v1
+entries:
+  thingsboard-cluster:
+  - annotations:
+      category: IoT
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.6.0
+    created: "2024-02-08T18:55:02.384337549+02:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.x.x
+    - alias: internalRedis
+      condition: internalRedis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.1.2
+    - alias: internalRedisCluster
+      condition: internalRedisCluster.enabled
+      name: redis-cluster
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 9.0.7
+    - alias: internalPostgresql
+      condition: internalPostgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 13.0.0
+    - alias: internalKafka
+      condition: internalKafka.enabled
+      name: kafka
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 23.0.0
+    - alias: internalCassandra
+      condition: internalCassandra.enabled
+      name: cassandra
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 10.8.0
+    - alias: internalZookeeper
+      condition: internalZookeeper.enabled
+      name: zookeeper
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 12.1.3
+    - alias: awscontroller
+      condition: awscontroller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.6.1
+    description: A Helm chart for Thingsboard cluster. ThingsBoard is an open-source
+      IoT platform for data collection, processing, visualization, and device management
+    digest: 3d7da2498de5a53e5a38b8761c4c7d35f44183ce538db5796ec938788d0bd09b
+    home: https://thingsboard.io/
+    keywords:
+    - iot
+    - telemetry
+    - device
+    - fleet
+    - dashboards
+    name: thingsboard-cluster
+    type: application
+    urls:
+    - thingsboard-cluster-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-02-08T18:55:02.340938195+02:00"
