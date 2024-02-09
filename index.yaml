@@ -2,15 +2,16 @@ apiVersion: v1
 entries:
   thingsboard-cluster:
   - annotations:
+      artifacthub.io/category: streaming-messaging
+      artifacthub.io/logoPath: thingsboard_white.png
       artifacthub.io/maintainers: |
         - name: amykolaichuk
           email: amykolaichuk@thingsboard.io
       artifacthub.io/prerelease: "true"
-      category: streaming-messaging
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-02-09T16:50:58.882936946+02:00"
+    created: "2024-02-09T17:13:16.354853488+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -51,7 +52,7 @@ entries:
       repository: https://aws.github.io/eks-charts
       version: 1.6.1
     description: Helm chart for Thingsboard cluster.
-    digest: 17b0180d7ec0356485c4b0bd226a4893c36ef9ee19d827eedf4089e672e5d777
+    digest: 37426abd62b21acc1cf998e224cd748cd97cbb0e7ef1d41b344c41037a15ba83
     home: https://thingsboard.io/
     icon: https://img.thingsboard.io/thingsboard_logo_blue.svg
     keywords:
@@ -66,4 +67,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-09T16:50:58.847010834+02:00"
+generated: "2024-02-09T17:13:16.318697445+02:00"
