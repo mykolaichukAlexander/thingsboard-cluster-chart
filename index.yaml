@@ -10,7 +10,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-02-09T15:59:18.422445632+02:00"
+    created: "2024-02-09T16:10:44.165633047+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -51,7 +51,7 @@ entries:
       repository: https://aws.github.io/eks-charts
       version: 1.6.1
     description: Helm chart for Thingsboard cluster.
-    digest: ebf38866adbaa792d13b9d44f02a8933a3fe3fb1ef673063438496ab20d50f29
+    digest: acd74b0ae8601c914026fde6e992a6391318e2629938579a719a90e2192ec563
     home: https://thingsboard.io/
     keywords:
     - thingsboard
@@ -65,4 +65,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-09T15:59:18.384302163+02:00"
+generated: "2024-02-09T16:10:44.125292857+02:00"
