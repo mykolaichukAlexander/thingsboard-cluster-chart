@@ -2,11 +2,15 @@ apiVersion: v1
 entries:
   thingsboard-cluster:
   - annotations:
-      category: IoT
+      artifacthub.io/maintainers: |
+        - name: amykolaichuk
+          email: amykolaichuk@thingsboard.io
+      artifacthub.io/prerelease: "true"
+      category: streaming-messaging
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-02-08T18:55:02.384337549+02:00"
+    created: "2024-02-09T15:59:18.422445632+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -46,11 +50,11 @@ entries:
       name: aws-load-balancer-controller
       repository: https://aws.github.io/eks-charts
       version: 1.6.1
-    description: A Helm chart for Thingsboard cluster. ThingsBoard is an open-source
-      IoT platform for data collection, processing, visualization, and device management
-    digest: 3d7da2498de5a53e5a38b8761c4c7d35f44183ce538db5796ec938788d0bd09b
+    description: Helm chart for Thingsboard cluster.
+    digest: ebf38866adbaa792d13b9d44f02a8933a3fe3fb1ef673063438496ab20d50f29
     home: https://thingsboard.io/
     keywords:
+    - thingsboard
     - iot
     - telemetry
     - device
@@ -61,4 +65,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-08T18:55:02.340938195+02:00"
+generated: "2024-02-09T15:59:18.384302163+02:00"
