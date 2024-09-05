@@ -3,6 +3,25 @@ entries:
   thingsboard-cluster:
   - annotations:
       artifacthub.io/category: streaming-messaging
+      artifacthub.io/changes: |
+        - kind: fixed
+          description: Fix storage class usage in Tb-node/core/rule-engine
+          links:
+            - name: GitHub Issue 2
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/issues/2
+            - name: GitHub Issue 3
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/issues/3
+            - name: GitHub Issue 4
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/issues/4
+            - name: GitHub PR
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/pull/8
+        - kind: fixed
+          description: Fix kafka replication factor config
+          links:
+            - name: GitHub Issue 1
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/issues/1
+            - name: GitHub Issue
+              url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/pull/8
       artifacthub.io/logoPath: thingsboard_white.png
       artifacthub.io/maintainers: |
         - name: amykolaichuk
@@ -11,7 +30,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-05T13:37:47.4551715+03:00"
+    created: "2024-09-05T14:27:22.9601693+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -52,7 +71,7 @@ entries:
       repository: https://aws.github.io/eks-charts
       version: 1.6.1
     description: Helm chart for Thingsboard cluster.
-    digest: 25319f44cc2a405f9334554a9b981d0bcf6b4b71ee828c798dce06f87a8b2da2
+    digest: 097347c9167f98369fafe7b4cfa6a9ff86aba7fa5148d2588e62e1f15a48cae2
     home: https://thingsboard.io/
     icon: https://img.thingsboard.io/thingsboard_logo_blue.svg
     keywords:
@@ -77,7 +96,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-05T13:37:47.4320252+03:00"
+    created: "2024-09-05T14:27:22.9419888+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -133,4 +152,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-05T13:37:47.4119081+03:00"
+generated: "2024-09-05T14:27:22.9211234+03:00"
