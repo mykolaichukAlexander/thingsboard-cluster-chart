@@ -3,6 +3,75 @@ entries:
   thingsboard-cluster:
   - annotations:
       artifacthub.io/category: streaming-messaging
+      artifacthub.io/changes: "- kind: added\n  description: Add annotation options
+        for rule engine and core/node, for pod templates \n  links:\n    - name: GitHub
+        PR\n      url: https://github.com/mykolaichukAlexander/thingsboard-cluster-helm/pull/23\n"
+      artifacthub.io/logoPath: thingsboard_white.png
+      artifacthub.io/maintainers: |
+        - name: amykolaichuk
+          email: amykolaichuk@thingsboard.io
+      artifacthub.io/prerelease: "true"
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.6.0
+    created: "2024-09-25T13:36:35.2186443+03:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.x.x
+    - alias: internalRedis
+      condition: internalRedis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.1.2
+    - alias: internalRedisCluster
+      condition: internalRedisCluster.enabled
+      name: redis-cluster
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 9.0.7
+    - alias: internalPostgresql
+      condition: internalPostgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 13.0.0
+    - alias: internalKafka
+      condition: internalKafka.enabled
+      name: kafka
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 23.0.0
+    - alias: internalCassandra
+      condition: internalCassandra.enabled
+      name: cassandra
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 10.8.0
+    - alias: internalZookeeper
+      condition: internalZookeeper.enabled
+      name: zookeeper
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 12.1.3
+    - alias: awscontroller
+      condition: awscontroller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.6.1
+    description: Helm chart for Thingsboard cluster.
+    digest: 1b67a4728ffdc2d1b20905e62bcb0666f0bd69c93e7cecac551cc0b74a0b53ed
+    home: https://thingsboard.io/
+    icon: https://img.thingsboard.io/thingsboard_logo_blue.svg
+    keywords:
+    - thingsboard
+    - iot
+    - telemetry
+    - device
+    - fleet
+    - dashboards
+    name: thingsboard-cluster
+    type: application
+    urls:
+    - thingsboard-cluster-0.1.5.tgz
+    version: 0.1.5
+  - annotations:
+      artifacthub.io/category: streaming-messaging
       artifacthub.io/changes: |
         - kind: added
           description: Add annotation options for rule engine and core/node
@@ -17,7 +86,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-25T13:17:44.0023559+03:00"
+    created: "2024-09-25T13:36:35.198608+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -86,7 +155,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-25T13:17:43.9804425+03:00"
+    created: "2024-09-25T13:36:35.1743475+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -158,7 +227,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-25T13:17:43.9601979+03:00"
+    created: "2024-09-25T13:36:35.1475529+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -243,7 +312,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-25T13:17:43.9430304+03:00"
+    created: "2024-09-25T13:36:35.1274488+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -309,7 +378,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-25T13:17:43.9197031+03:00"
+    created: "2024-09-25T13:36:35.1111232+03:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -365,4 +434,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-25T13:17:43.9051672+03:00"
+generated: "2024-09-25T13:36:35.0900811+03:00"
