@@ -5,6 +5,75 @@ entries:
       artifacthub.io/category: streaming-messaging
       artifacthub.io/changes: |
         - kind: added
+          description: Added extra routes to the ingress controller.
+      artifacthub.io/logoPath: thingsboard_white.png
+      artifacthub.io/maintainers: |
+        - name: amykolaichuk
+          email: amykolaichuk@thingsboard.io
+      artifacthub.io/prerelease: "true"
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.6.0
+    created: "2026-03-02T12:15:22.6974424+02:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 2.x.x
+    - alias: internalRedis
+      condition: internalRedis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.1.2
+    - alias: internalRedisCluster
+      condition: internalRedisCluster.enabled
+      name: redis-cluster
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 9.0.7
+    - alias: internalPostgresql
+      condition: internalPostgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 13.0.0
+    - alias: internalKafka
+      condition: internalKafka.enabled
+      name: kafka
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 23.0.0
+    - alias: internalCassandra
+      condition: internalCassandra.enabled
+      name: cassandra
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 10.8.0
+    - alias: internalZookeeper
+      condition: internalZookeeper.enabled
+      name: zookeeper
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 12.1.3
+    - alias: awscontroller
+      condition: awscontroller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.6.1
+    description: Helm chart for Thingsboard cluster.
+    digest: 06ba4d50c30a0f40e2a352f297876d1df1ca9aa722bac9540c9802153bef1fc5
+    home: https://thingsboard.io/
+    icon: https://img.thingsboard.io/thingsboard_logo_blue.svg
+    keywords:
+    - thingsboard
+    - iot
+    - telemetry
+    - device
+    - fleet
+    - dashboards
+    name: thingsboard-cluster
+    type: application
+    urls:
+    - thingsboard-cluster-0.2.26.tgz
+    version: 0.2.26
+  - annotations:
+      artifacthub.io/category: streaming-messaging
+      artifacthub.io/changes: |
+        - kind: added
           description: Added extra volumes, secrets , configmaps and envs to the transport service.
       artifacthub.io/logoPath: thingsboard_white.png
       artifacthub.io/maintainers: |
@@ -14,7 +83,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:01.0395312+02:00"
+    created: "2026-03-02T12:15:22.6663493+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -83,7 +152,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:01.0118272+02:00"
+    created: "2026-03-02T12:15:22.6350014+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -152,7 +221,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.9710496+02:00"
+    created: "2026-03-02T12:15:22.6143059+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -221,7 +290,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.9373224+02:00"
+    created: "2026-03-02T12:15:22.5879637+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -293,7 +362,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.9042987+02:00"
+    created: "2026-03-02T12:15:22.5544278+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -362,7 +431,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.7969668+02:00"
+    created: "2026-03-02T12:15:22.4738263+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -431,7 +500,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.7721831+02:00"
+    created: "2026-03-02T12:15:22.4483669+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -503,7 +572,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.7427579+02:00"
+    created: "2026-03-02T12:15:22.4080446+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -572,7 +641,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.6916249+02:00"
+    created: "2026-03-02T12:15:22.3313187+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -642,7 +711,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.6604208+02:00"
+    created: "2026-03-02T12:15:22.3010738+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -718,7 +787,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.6357987+02:00"
+    created: "2026-03-02T12:15:22.2757951+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -786,7 +855,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.6071899+02:00"
+    created: "2026-03-02T12:15:22.2471841+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -855,7 +924,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.5773541+02:00"
+    created: "2026-03-02T12:15:22.2166208+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -929,7 +998,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.5486317+02:00"
+    created: "2026-03-02T12:15:22.1806755+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1001,7 +1070,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.515707+02:00"
+    created: "2026-03-02T12:15:22.1217306+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1073,7 +1142,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.8260951+02:00"
+    created: "2026-03-02T12:15:22.4990654+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1145,7 +1214,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.2293173+02:00"
+    created: "2026-03-02T12:15:21.9009417+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1217,7 +1286,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.4905063+02:00"
+    created: "2026-03-02T12:15:22.0968541+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1289,7 +1358,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.4618997+02:00"
+    created: "2026-03-02T12:15:22.0761246+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1361,7 +1430,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.4287625+02:00"
+    created: "2026-03-02T12:15:22.047336+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1433,7 +1502,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.3973992+02:00"
+    created: "2026-03-02T12:15:22.0237105+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1502,7 +1571,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.3613602+02:00"
+    created: "2026-03-02T12:15:21.9984068+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1574,7 +1643,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.3192357+02:00"
+    created: "2026-03-02T12:15:21.9752645+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1643,7 +1712,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.276631+02:00"
+    created: "2026-03-02T12:15:21.9496143+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1715,7 +1784,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.2542023+02:00"
+    created: "2026-03-02T12:15:21.9257113+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1800,7 +1869,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.198593+02:00"
+    created: "2026-03-02T12:15:21.8764505+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1866,7 +1935,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2026-02-18T16:38:00.1697973+02:00"
+    created: "2026-03-02T12:15:21.851932+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1922,4 +1991,4 @@ entries:
     urls:
     - thingsboard-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-18T16:38:00.1381005+02:00"
+generated: "2026-03-02T12:15:21.8265509+02:00"
